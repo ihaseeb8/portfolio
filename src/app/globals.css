@@ -9,4 +9,11 @@
     .hero-ring {
         @apply border absolute inset-0  left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 rounded-full border-emerald-300/5 shadow-[0px_0px_20px_inset] shadow-emerald-300/5
     }
+
 }
+
+@layer utilities{
+    .container {
+        @apply lg:max-w-5xl;
+    }
+}   
