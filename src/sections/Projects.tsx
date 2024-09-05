@@ -7,6 +7,8 @@ import grainImage from'@/assets/images/grain.jpg'
 
 import { features } from "process";
 import Image from "next/image";
+import SectionHeader from "@/components/SectionHeader";
+import Card from "@/components/Card";
 
 const portfolioProjects = [
   {
@@ -52,18 +54,17 @@ export const ProjectsSection = () => {
   
     <section className="pb-14 lg:py-24">
       <div className="container">
-        <div className="flex justify-center">
-          <p className="uppercase font-semibold tracking-wide bg-gradient-to-t from-emerald-300 to-sky-400 text-transparent bg-clip-text">Real-world Results</p>
-        </div>
-        
-        <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">Featured Projects</h2>
+        <SectionHeader 
+          eyebrow="Real-world Results"
+          title="Featured Projects"
+          description="See how I transformed concepts into engaging digital experiences"
+        />
 
-        <p className="text-center text-white/60 my-4 md:text-lg lg:text-xl max-w-md mx-auto">See how I transformed concepts into engaging digital experiences</p>
         <div className="flex flex-col mt-10 gap-20 md:mt-20">
         
           {portfolioProjects.map(project =>(
-            <div key={project.title} className=" px-8 pt-8 md:pt-12 md:px-10 bg-gray-800 overflow-hidden rounded-3xl relative z-10 after:z-10 after:content-[''] after:absolute after:inset-0 after:outline after:-outline-offset-2 after:pointer-events-none after:rounded-3xl after:outline-white/20 lg:pt-16 lg:px-20">
-                <div className="absolute inset-0 -z-10 opacity-5" style={{backgroundImage: `url(${grainImage.src})`}}></div>
+            <Card key={project.title} className=" px-8 pt-8 pb-0 md:pt-12 md:px-10  lg:pt-16 lg:px-20">
+                
                 <div className="lg:grid lg:grid-cols-2 lg:gap-16">
 
                   <div className="lg:pb-16">
@@ -96,7 +97,7 @@ export const ProjectsSection = () => {
                   
 
               </div>
-            </div>
+            </Card>
           ))}
           </div>
         </div>
