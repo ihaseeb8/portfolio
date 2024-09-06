@@ -32,7 +32,7 @@ const portfolioProjects = [
       { title: "Expanded customer reach by 35%" },
       { title: "Increased brand awareness by 15%" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
+    link: "https://saas-landing-page.haseeb.info/",
     image: lightSaasLandingPage,
   },
   {
@@ -44,7 +44,7 @@ const portfolioProjects = [
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
+    link: "https://ai-startup.haseeb.info/",
     image: aiStartupLandingPage,
   },
 ];
@@ -90,7 +90,7 @@ export const ProjectsSection = () => {
                         </li>
                       ))}
                     </ul>
-                    <a href={project.link}>
+                    <a href={project.link} target="_blank">
                       <button className="bg-white text-gray-950 h-12 w-full md:w-auto rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 px-6">
                       <span>Visit Live Site</span>
                       <ArrowUpRighIcon className='size-6'/>
